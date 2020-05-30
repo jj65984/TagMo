@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-def AAVersion = '4.5.0-SNAPSHOT'
+def AASnapshotVersion = '4.8.0-SNAPSHOT'
 def AndroidSupportVersion = '26.1.0'
 
 buildscript {
@@ -31,8 +31,8 @@ android {
         fat {
             dimension "abi"
             ndk {
-                abiFilters "x86", "armeabi-v7a", "armeabi"
-                versionCode = 0
+                abiFilters "x86", "armeabi-v7a"
+                versionCode = 1
             }
         }
 
@@ -69,8 +69,8 @@ dependencies {
     implementation "com.android.support:preference-v7:$AndroidSupportVersion"
     implementation "com.android.support:preference-v14:$AndroidSupportVersion"
     implementation "com.android.support:cardview-v7:$AndroidSupportVersion"
-    annotationProcessor "org.androidannotations:androidannotations:$AAVersion"
-    implementation "org.androidannotations:androidannotations-api:$AAVersion"
+    annotationProcessor "org.androidannotations:androidannotations:$AASnapshotVersion"
+    implementation "org.androidannotations:androidannotations-api:$AASnapshotVersion"
     annotationProcessor 'org.parceler:parceler:1.1.9'
     implementation 'org.parceler:parceler-api:1.1.9'
     implementation 'com.robertlevonyan.view:MaterialChipView:1.0.1'
